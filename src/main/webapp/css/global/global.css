@@ -1,0 +1,56 @@
+/* 
+    Document   : global
+    Created on : Aug 30, 2013, 11:15:16 PM
+    Author     : Kevin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    background: none repeat scroll 0 0 #E0E0E0;
+    color: #333333;
+    font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: gray;
+}
+
+nav ul {
+    margin: 0 auto;
+    width: 940px;
+    list-style: none;
+}
+
+nav ul li {
+    float: left;
+    background-color: gray;
+}
+
+nav ul li a {
+    text-align: center;
+    display: block;
+    margin-right: 20px;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#main {
+    width: 1000px;
+    box-shadow: 5px 5px 5px #888888;
+}

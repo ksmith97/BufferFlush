@@ -1,0 +1,27 @@
+/* 
+    Document   : insult
+    Created on : Aug 31, 2013, 5:54:42 PM
+    Author     : Kevin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    background: none repeat scroll 0 0 #E0E0E0;
+    color: #333333;
+    font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#message {
+    width: 100%;
+    font-size: 70px;
+}
+
