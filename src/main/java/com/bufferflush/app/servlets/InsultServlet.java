@@ -19,36 +19,8 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class InsultServlet extends HttpServlet {
 
-    private static InsultBean insultBean = new InsultBean();
-    
-    /**
-     * Processes requests for both HTTP
-     * <code>GET</code> and
-     * <code>POST</code> methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    private static final InsultBean insultBean = new InsultBean();
 
-        String messageType = StringUtils.trimToNull( request.getParameter("type") );
-
-        response.setContentType("text/html;charset=UTF-8");
-        try(PrintWriter out = response.getWriter()) {
-
-            if ("welcome".equals(messageType)) {
-                out.write(insultBean.getWelcomeMessage());
-            } else {
-                out.write(insultBean.getInsultMessage());
-            }
-
-        }
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP
      * <code>GET</code> method.
@@ -61,22 +33,17 @@ public class InsultServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
+                String messageType = StringUtils.trimToNull( request.getParameter("type") );
 
-    /**
-     * Handles the HTTP
-     * <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        try(PrintWriter out = response.getWriter()) {
+
+            if ("welcome".equalsIgnoreCase(messageType)) {
+                out.write(insultBean.getWelcomeMessage());
+            } else {
+                out.write(insultBean.getInsultMessage());
+            }
+        }
     }
 
     /**
@@ -86,6 +53,6 @@ public class InsultServlet extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+        return "Servlet to generate insults";
+    }
 }

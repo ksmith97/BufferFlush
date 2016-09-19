@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+    <rule>
+        <from>^/$</from>
+        <to>/index.jsp</to>
+    </rule>
+    
+    <rule>
+        <from>^/about$</from>
+        <to>/jsp/about.jsp</to>
+    </rule>
+    
+    <rule>
+        <from>^/gameOfLife$</from>
+        <to>/jsp/gameOfLife.jsp</to>
+    </rule>
+    
+    <rule>
+        <from>^/insult$</from>
+        <to>/jsp/insult.jsp</to>
+    </rule>
+    
+    <rule>
+        <from>^/getInsult$</from>
+        <to>/servlets/insult</to>
+    </rule>
+</urlrewrite>
+

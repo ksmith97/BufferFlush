@@ -10,7 +10,7 @@
                 url: settings.url,
                 dataType: "text",
                 error: function() {
-                    console.log("An error occured in calling " + settings.url);
+                    console.error("An error occured in calling " + settings.url);
                 },
                 success: function(data) {
                     $(element).text(data);
@@ -26,4 +26,4 @@
     };
 }(jQuery));
 
-$(document).ready(function(){ $("#message").insultor({url: "/getInsult"}); })
+$(document).ready(function(){ $("#message").insultor({url: "getInsult"}); })

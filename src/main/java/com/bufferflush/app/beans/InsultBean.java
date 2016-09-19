@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class InsultBean {
 
-    private static List<String> insults = Arrays.asList(
+    private final static List<String> insults = Arrays.asList(
         "Wow, you don't look as fat as you normally do!",
         "Your face looks like a butt.",
         "You call that good posture?",
@@ -33,7 +33,7 @@ public class InsultBean {
         "I'm sure one day you will get a real job.",
         "When people say you are \"special\" they really mean it.");
 
-    private static Random random = new Random();
+    private final static Random random = new Random();
 
     public String getWelcomeMessage() {
         return "Hi! How are you fatass?";
